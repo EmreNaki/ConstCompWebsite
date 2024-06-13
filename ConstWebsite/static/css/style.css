@@ -1,0 +1,23 @@
+    body {
+    background-image: url("../media/images/construction-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    }
+
+   .navbar-separator {
+      border-left: 1px solid #ccc;
+      height: 30px; /
+      margin: 0 10px;
+    }
+
+    .short-navbar {
+            width: 80%;
+            margin: 0 auto;
+
+    .panel-footer {
+            height: 5px;
+            font-size: 14px;
+        }

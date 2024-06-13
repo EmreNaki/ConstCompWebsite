@@ -1,0 +1,24 @@
+{% extends 'navg/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container bg-light bg-opacity-50">
+        <h1 class="text-center">GELECEK PROJELERİMİZ</h1>
+  <div class="row">
+      <div class="col">
+               {% for FutureProject in FProjects %}
+        <ul>
+            <li>
+                <h4>{{ FutureProject.name }}</h4>
+                <p>{{ FutureProject.text }}</p>
+                <h5> Adresi: {{ FutureProject.location }}</h5>
+                <h5> Tamamlandığı tarih {{ FutureProject.finishdate }}</h5>
+                </li>
+        </ul>
+        </div>
+       <div class="col">
+           <img src="{{ FutureProject.photo.url}}" width="500" height="400">
+    </div>
+      {% endfor %}
+  </div>
+  </div>
+{% endblock %}

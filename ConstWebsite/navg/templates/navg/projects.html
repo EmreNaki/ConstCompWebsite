@@ -1,0 +1,24 @@
+{% extends 'navg/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container bg-light bg-opacity-50">
+    <h1 class="text-center">TAMAMLANAN PROJELER</h1>
+  <div class="row">
+      <div class="col">
+        <ul>
+            {% for PastProject in PProjects %}
+            <li>
+                <h4>{{ PastProject.name }}</h4>
+                <p>{{ PastProject.text }}</p>
+                <h5> Adresi: {{ PastProject.location }}</h5>
+                <h5> Tamamlandığı tarih {{ PastProject.finishdate }}</h5>
+                </li>
+        </ul>
+        </div>
+       <div class="col">
+           <img src="{{ PastProject.photo.url}}" width="500" height="400">
+    </div>
+      {% endfor %}
+  </div>
+  </div>
+{% endblock %}

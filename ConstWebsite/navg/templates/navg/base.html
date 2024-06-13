@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>Company Name</title>
+</head>
+<body>
+    <div class="container-lg my-5">
+        <div class="row">
+           <div class="col">  
+                <img src="{% static 'media/images/company_logo.jpg' %}" class="img-fluid" alt="Responsive image" width="300" height="300">
+            </div>
+           <div class="col">
+           </div>
+             <div class="col">
+        <div class="card" style="width: 24rem;">
+   <div class="card-body">
+    <h5 class="card-title text-center">Tel No & Email</h5>
+    <p class="card-text text-center">0123456789 & <a href="mailto:ornek@sirket.com?subject=KonuRequest&body=Lütfen emailinizi yazın.">ornek@sirket.com</a></p>
+  </div>
+</div>
+      </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-warning navbar-center bg-warning text-dark text-bold short-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HOŞGELDİNİZ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">ANASAYFA</a>
+              </li>
+              <span class="navbar-separator"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'history' %}">TARİHÇE</a>
+              </li>
+              <span class="navbar-separator"></span>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PROJELERİMİZ
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'pprojects' %}">GEÇMİŞ PROJELERİMİZ</a></li>
+                  <li><a class="dropdown-item" href="{% url 'fprojects' %}">GELECEK PROJELERİMİZ</a></li>
+                </ul>
+              </li>
+              <span class="navbar-separator"></span>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'reachus' %}">BİZE ULAŞIN</a>
+              </li>
+              <span class="navbar-separator"></span>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        {% block content %}
+        {% endblock %}
+        <footer class="text-dark text-center text-lg-start bg-warning panel-footer">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">ŞİRKET İSMİ</h5>
+          <img src="{% static 'media/images/company_logo.jpg' %}" class="img-fluid" alt="Responsive image" width="300" height="300">
+          <div class="mt-4">
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">İLETİŞİM & ADRES</h5>
+
+          <div class="form-outline form-white mb-4">
+          </div>
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Milas / MUĞLA</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@orneksirket.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Çalışma Saatleri</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Pzt - Cmt:</td>
+                <td>8:00 - 17:30</td>
+              </tr>
+              <tr>
+                <td>Pazar:</td>
+                <td>Kapalıyız</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <p>Emre Naki CÖMERT</p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"> </script>
+  </body>
+</html>

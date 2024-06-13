@@ -1,0 +1,28 @@
+{% extends 'navg/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container bg-light bg-opacity-50">
+  <div class="row">
+      <div class="col">
+          <h2>Bize buradan şikeyet ve dileklerinizi bildirebilirsiniz.</h2>
+          <h4>Not: Email adresiniz ve kişisel bilgileriniz üçüncü sahıslarla ASLA PAYLAŞILMAZ.</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.312799616341!2d27.851786175400186!3d37.852970807652575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b92b73539a1c9d%3A0x42453e9cdd5dd1b0!2sAdnan%20Menderes%20University!5e0!3m2!1sen!2str!4v1718030145449!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="col">
+ <div class="form-group">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Gönder</button>
+    {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+ </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

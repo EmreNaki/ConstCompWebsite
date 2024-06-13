@@ -1,0 +1,66 @@
+{% extends 'navg/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container bg-light bg-opacity-50">
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
+            <div class="maintxt" >
+                <img class="center-block" src="{%static 'media/images/banner.jpg' %}" class="img-responsive" width="800" height="550">
+            </div>
+        </div>
+        <div class="col">
+        <h1>
+                <div class="display-2">ŞİRKET İSMİ</div>
+                <div class="display-5 text-muted">Tanıtım yazısı</div>
+              </h1>
+        </div>
+    </div>
+</div>
+
+<section id="intro">
+        <div class="container-lg bg-light bg-opacity-50">
+          <div class="row justify-content-center">
+            <div class="col-md-5 text-center text-md-start">
+              <h1>
+                <div class="display-2">Güvenilir bir yer</div>
+                <div class="display-5 text-muted">Aileniz için</div>
+              </h1>
+              <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-5 ">
+              <img class="img-fluid" src="{% static 'media/images/team-construction-engineers.png' %}" alt="Asset" width="500" height="500">
+            </div>
+          </div>
+        </div>
+      </section>
+<div class="row justify-content-center">
+    <div class="text-center text-light">
+        <h1>İLKELERİMİZ</h1>
+    </div>
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <div class="card" style="width: 24rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center">GÜVEN</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+      </div>
+     <div class="col">
+        <div class="card" style="width: 24rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center">KALİTE</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+      </div>
+     <div class="col">
+        <div class="card" style="width: 24rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center">HİZMET</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+     </div>
+{% endblock %}
